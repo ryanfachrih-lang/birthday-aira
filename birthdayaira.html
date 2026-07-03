@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Selamat Ulang Tahun, Aira Mutiara Hidayat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Marcellus&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="no-scroll">
+
+  <!-- ====== PEMBUKA: AMPLOP SURAT ====== -->
+  <div class="intro-overlay" id="intro-overlay">
+    <div class="intro-balloons" aria-hidden="true">
+      <span class="balloon balloon-a"></span>
+      <span class="balloon balloon-b"></span>
+      <span class="balloon balloon-c"></span>
+      <span class="balloon balloon-d"></span>
+    </div>
+
+    <p class="envelope-hint">ketuk amplopnya, Aira</p>
+
+    <div class="envelope-wrap" id="envelope-wrap" role="button" tabindex="0" aria-label="Buka surat ulang tahun">
+      <div class="envelope" id="envelope">
+        <div class="envelope-letter">
+          <p class="envelope-letter-title">Untuk Aira</p>
+          <p class="envelope-letter-sub">sepucuk surat kecil menantimu&hellip;</p>
+        </div>
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal" aria-hidden="true">A</div>
+      </div>
+    </div>
+
+    <p class="envelope-cta">sentuh untuk membuka</p>
+  </div>
+
+  <!-- ====== MUSIK LATAR ====== -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="music-toggle" class="music-toggle" aria-label="Putar musik latar" aria-pressed="false">
+    <span class="music-disc">
+      <i class="note">&#9834;</i>
+    </span>
+  </button>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-balloons" aria-hidden="true">
+      <span class="balloon balloon-a"></span>
+      <span class="balloon balloon-b"></span>
+      <span class="balloon balloon-c"></span>
+    </div>
+    <p class="eyebrow">selamat ulang tahun untuk</p>
+    <h1 class="hero-name">Aira Mutiara<br />Hidayat</h1>
+    <p class="hero-sub">satu tahun lagi, satu cerita baru yang lebih indah.</p>
+    <button class="scroll-cue" id="scroll-cue" aria-label="Gulir ke bawah">
+      <span></span>
+    </button>
+  </section>
+
+  <!-- ====== LILIN / CAKE INTERAKTIF ====== -->
+  <section class="candle-section" id="candle-section">
+    <p class="section-eyebrow">buat satu permohonan</p>
+    <h2 class="section-title">Tiup lilinnya, Aira</h2>
+    <p class="section-hint">sentuh atau klik nyala lilin di bawah ini</p>
+
+    <button class="cake-wrap" id="blow-btn" aria-label="Tiup lilin ulang tahun">
+      <svg viewBox="0 0 240 220" class="cake-svg" id="cake-svg">
+        <!-- asap tiupan lilin -->
+        <g id="smoke" class="smoke" opacity="0">
+          <path d="M120 55 C 110 40, 130 30, 120 15" />
+        </g>
+
+        <!-- nyala lilin -->
+        <g id="flame-group" class="flame-group">
+          <ellipse class="flame-outer" cx="120" cy="48" rx="7" ry="16" />
+          <ellipse class="flame-inner" cx="120" cy="53" rx="3.5" ry="8" />
+        </g>
+
+        <!-- lilin -->
+        <rect x="115" y="58" width="10" height="34" rx="2" class="candle-stick" />
+
+        <!-- tingkat atas kue -->
+        <path d="M70 92 h100 l10 30 h-120 z" class="cake-tier cake-tier-top" />
+        <!-- tingkat bawah kue -->
+        <path d="M45 122 h150 l12 55 h-174 z" class="cake-tier cake-tier-bottom" />
+
+        <!-- garis dekor emas -->
+        <line x1="55" y1="150" x2="197" y2="150" class="cake-deco-line" />
+        <circle cx="70" cy="150" r="2.5" class="cake-deco-dot" />
+        <circle cx="120" cy="150" r="2.5" class="cake-deco-dot" />
+        <circle cx="170" cy="150" r="2.5" class="cake-deco-dot" />
+      </svg>
+    </button>
+
+    <p class="cake-status" id="cake-status">nyalanya masih menyala&hellip;</p>
+  </section>
+
+  <!-- ====== PESAN ====== -->
+  <section class="message-section" id="message-section">
+    <p class="section-eyebrow">untuk Aira</p>
+    <h2 class="section-title">Sebuah harapan kecil</h2>
+
+    <!--
+      GANTI TEKS DI BAWAH INI dengan ucapanmu sendiri untuk Aira.
+      Setiap kalimat akan muncul satu per satu secara otomatis.
+      Tambah atau kurangi baris <p> sesuai kebutuhan.
+    -->
+    <div class="message-text" id="message-text">
+      <p>Selamat 3 Juli yang ke-17 yaaa, for my sister the most beautiful girl in the world after our mom 😎💕😂, wkwkwkwk ternyata ini sweet seventeen kamu yaaa 🎂🍰.</p>
+      <p>Semoga semua keinginan yang kamu punya bisa terwujud pelan-pelan yaa.</p>
+      <p>Jangan lupa juga, tahun ini bakal jadi tahun penentu kamu mau ngejar kampus mana, tapi semoga bisa dapet PTN lah ya hehehe 📚🎒📖, pokoknya jangan bosen-bosen cerita ke kakak lah ya, apapun ceritain aja, gak perlu malu kalo mau cerita, yuhuuu :)</p>
+      <p>Kalo fotonya kurang menarik, kakak say sorry ya, soalnya jujur nih yaaa ternyata arsip foto-foto kamu yang bagus tuu dikit banget wkwkwk, tapi wajar banget sih, orang kita aja jarang foto :(</p>
+      <p>Pokoknya semangat terus deh, perjalanan masih panjang dan masa depan cerah sedang menanti 🌞💌.</p>
+    </div>
+  </section>
+
+  <!-- ====== GALERI FOTO ====== -->
+  <section class="gallery-section" id="gallery-section">
+    <p class="section-eyebrow">kenangan</p>
+    <h2 class="section-title">Beberapa potret cerita</h2>
+
+    <!--
+      GANTI PLACEHOLDER DI BAWAH dengan foto asli kamu.
+      Caranya: taruh file foto di folder yang sama (misalnya foto1.jpg),
+      lalu ganti <div class="photo-placeholder">...</div>
+      menjadi <img src="foto1.jpg" alt="deskripsi singkat foto" class="gallery-photo" />
+      Ulangi untuk tiap foto (idealnya 5-10 foto).
+    -->
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item"><img src="WhatsApp Image 2026-07-03 at 15.10.01.jpeg" alt="momen wisuda bersama keluarga" class="gallery-photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-07-03 at 15.15.06 (2).jpeg" alt="selfie bersama adik-adik" class="gallery-photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-07-03 at 15.15.06 (3).jpeg" alt="potret dengan filter lucu" class="gallery-photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-07-03 at 15.15.07 (1).jpeg" alt="foto keluarga sambil rebahan" class="gallery-photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-07-03 at 15.15.07.jpeg" alt="Aira kecil berpelukan dengan kakak" class="gallery-photo" loading="lazy" /></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-07-03 at 15.15.06 (1).jpeg" alt="momen wisuda, potret lain" class="gallery-photo" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <!-- lightbox foto -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="" id="lightbox-img" />
+  </div>
+
+  <!-- ====== PENUTUP ====== -->
+  <footer class="closing">
+    <div class="closing-balloons" aria-hidden="true">
+      <span class="balloon balloon-a"></span>
+      <span class="balloon balloon-b"></span>
+    </div>
+    <p class="closing-line">dengan cinta,</p>
+    <p class="closing-signature">untuk Aira Mutiara Hidayat</p>
+  </footer>
+
+  <!-- confetti canvas, ditumpuk di atas semua konten -->
+  <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
